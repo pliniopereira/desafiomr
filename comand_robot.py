@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# =============================================================================
+# Created By  : Plínio Pereira
+# Email : pliniojr@gmail.com
+# Created Date: Mon May 30 2021
+# =============================================================================
+"""Desafio técnico para vaga de estágio"""
+"""Desafio Python - Lógica de Programação"""
+# =============================================================================
+
 pox_inicial = 20
 orientacao = 'N'
 saiu_quadrado = False

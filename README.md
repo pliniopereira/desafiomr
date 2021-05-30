@@ -2,7 +2,7 @@
 
 ## Used:
   * Manjaro Linux x86_64
-  * [Python v3.9.5 ](#Pyserial)
+  * Python v3.9.5
 
 ## How to run on terminal:
 ```

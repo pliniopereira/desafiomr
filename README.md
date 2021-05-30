@@ -17,8 +17,8 @@ $ python3 comand_robot.py
 
 ## How to run on docker:
 ```
-docker build -t mars_robot:latest .
-docker run --rm -it mars_robot:latest
+$ docker build -t mars_robot:latest .
+$ docker run --rm -it mars_robot:latest
 ```
 
 ## License

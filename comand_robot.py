@@ -22,8 +22,8 @@ def desenhar(eixo_x, eixo_y, direcao):
 desenhar(0, 4, 'N')
 print('(%d,%d,%c)' %(0, 0, 'N'))
 
-pox_inicial_backup = 20
-orientacao_inicial_backup = 'N'
+pox_inicial_backup2 = 20
+orientacao_inicial_backup2 = 'N'
 
 print("Entre com os comandos")
 print("Digite \"EXIT\" para sair")
@@ -54,6 +54,7 @@ while (comando_total != "EXIT"):
                     orientacao = 'S'
             elif(comando == 'M'):
                 posicao_y = pox_inicial // 5
+                posicao_x = pox_inicial % 5
                 if (orientacao == 'N'):
                     if (posicao_y > 0):
                         pox_inicial -= 5
@@ -78,15 +79,19 @@ while (comando_total != "EXIT"):
             print("%c entrada invalida\nComando ignorado" %(comando))
 
     if(saiu_quadrado == True):
-        pox_inicial = pox_inicial_backup
-        orientacao = orientacao_inicial_backup
+        pox_inicial = pox_inicial_backup2
+        orientacao = orientacao_inicial_backup2
         saiu_quadrado = False
+        posicao_x = pox_inicial % 5
+        posicao_y = pox_inicial // 5
         print("Comando impossivel de ser executado")
         desenhar(posicao_x, posicao_y, orientacao)
         print("Digite \"EXIT\" para sair")
         print("Entre com novos comandos")
         comando_total = str(input())
     else:
+        pox_inicial_backup2 = pox_inicial
+        orientacao_inicial_backup2 = orientacao
         posicao_x = pox_inicial % 5
         posicao_y = pox_inicial // 5
         desenhar(posicao_x, posicao_y, orientacao)

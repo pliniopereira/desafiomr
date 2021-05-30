@@ -3,6 +3,7 @@
 ## Used:
   * Manjaro Linux x86_64
   * Python v3.9.5
+  * Docker version 20.10.6
 
 ## First clone the repository
 ```

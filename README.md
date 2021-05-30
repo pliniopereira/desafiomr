@@ -4,9 +4,15 @@
   * Manjaro Linux x86_64
   * Python v3.9.5
 
+## First clone the repository
+```
+$ git clone https://github.com/pliniopereira/desafiomr.git
+$ cd desafiomr
+```
+
 ## How to run on terminal:
 ```
-python3 comand_robot.py
+$ python3 comand_robot.py
 ```
 
 ## How to run on docker:

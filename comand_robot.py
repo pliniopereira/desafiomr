@@ -1,14 +1,37 @@
-print("Entre com os comandos")
-comando_total = str(input())
-
 pox_inicial = 20
 orientacao = 'N'
 saiu_quadrado = False
 
-while (pox_inicial >= 0 and pox_inicial <= 24):
-    if (comando_total == 'S'):
-        print("Robo desligando...\nTenha um bom dia!")
-        break
+def desenhar(eixo_x, eixo_y, direcao):
+    if (direcao == 'N'):
+        direcao = "\u2B06\uFE0F"
+    elif (direcao == 'S'):
+        direcao = "\u2B07\uFE0F"
+    elif (direcao == 'W'):
+        direcao = "\u2B05\uFE0F"
+    elif (direcao == 'E'):
+        direcao = "\u27A1\uFE0F"
+    for i in range(0, 5):
+        for j in range(0, 5):
+            if(i == eixo_y and j == eixo_x):
+                print(direcao + " ", end = " ")
+            else:
+                print('\U0001f7e5', end = " ")
+        print()
+
+desenhar(0, 4, 'N')
+print('(%d,%d,%c)' %(0, 0, 'N'))
+
+pox_inicial_backup = 20
+orientacao_inicial_backup = 'N'
+
+print("Entre com os comandos")
+print("Digite \"EXIT\" para sair")
+comando_total = str(input())
+
+while (comando_total != "EXIT"):
+    pox_inicial_backup = pox_inicial
+    orientacao_inicial_backup = orientacao
     for comando in comando_total:
         if (comando == 'M' or comando == 'L' or comando == 'R'):
             if (comando == 'L'):
@@ -30,42 +53,54 @@ while (pox_inicial >= 0 and pox_inicial <= 24):
                 elif(orientacao == 'E'):
                     orientacao = 'S'
             elif(comando == 'M'):
-                posicao_x = pox_inicial % 5
+                posicao_y = pox_inicial // 5
                 if (orientacao == 'N'):
-                    pox_inicial -= 5
+                    if (posicao_y > 0):
+                        pox_inicial -= 5
+                    else:
+                        saiu_quadrado = True
                 elif (orientacao == 'S'):
-                    pox_inicial += 5
+                    if (pox_inicial <= 19):
+                        pox_inicial += 5
+                    else:
+                        saiu_quadrado = True
                 elif (orientacao == 'W'):
-                    if(posicao_x == 0):
-                        saiu_quadrado = True
-                    else:
+                    if (posicao_x > 0):
                         pox_inicial -= 1
-                elif (orientacao == 'E'):
-                    if(posicao_x == 4):
-                        saiu_quadrado = True
                     else:
+                        saiu_quadrado = True
+                elif (orientacao == 'E'):
+                    if (posicao_x < 4):
                         pox_inicial += 1
+                    else:
+                        saiu_quadrado = True
         else:
             print("%c entrada invalida\nComando ignorado" %(comando))
-    posicao_x = pox_inicial % 5
-    posicao_y = pox_inicial // 5
-    if(saiu_quadrado == True or posicao_y < 0 or posicao_y > 4 or posicao_x < 0 or posicao_x > 4):
-        print("Comando impossivel de ser executado")
+
+    if(saiu_quadrado == True):
         pox_inicial = pox_inicial_backup
         orientacao = orientacao_inicial_backup
-        print("Digite somente 'S' para sair")
-        print("Entre com os comandos")
+        saiu_quadrado = False
+        print("Comando impossivel de ser executado")
+        desenhar(posicao_x, posicao_y, orientacao)
+        print("Digite \"EXIT\" para sair")
+        print("Entre com novos comandos")
         comando_total = str(input())
     else:
+        posicao_x = pox_inicial % 5
+        posicao_y = pox_inicial // 5
+        desenhar(posicao_x, posicao_y, orientacao)
         if (posicao_y == 4):
-            posicao_y = 0
+            posicao_y_eixo = 0
         elif (posicao_y == 3):
-            posicao_y = 1
+            posicao_y_eixo = 1
+        elif (posicao_y == 2):
+            posicao_y_eixo = 2
         elif (posicao_y == 1):
-            posicao_y = 3
+            posicao_y_eixo = 3
         elif (posicao_y == 0):
-            posicao_y = 4
-        pox_inicial_backup = pox_inicial
-        orientacao_inicial_backup = orientacao
-        print('(%d,%d,%c)' %(posicao_x, posicao_y, orientacao,))
+            posicao_y_eixo = 4
+        print('(%d,%d,%c)' %(posicao_x, posicao_y_eixo, orientacao))
         comando_total = str(input())
+
+print("Robo desligando...\n""\U0001F4A4\U0001F916\U0001F4A4""\nTenha um bom dia!")

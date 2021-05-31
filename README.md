@@ -11,7 +11,7 @@ $ git clone https://github.com/pliniopereira/desafiomr.git
 $ cd desafiomr
 ```
 
-## How to execute using python on terminal:
+## How to execute using Python on terminal:
 ```
 $ python3 comand_robot.py
 ```

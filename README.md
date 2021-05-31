@@ -11,12 +11,12 @@ $ git clone https://github.com/pliniopereira/desafiomr.git
 $ cd desafiomr
 ```
 
-## How to run on terminal:
+## How to execute using python on terminal:
 ```
 $ python3 comand_robot.py
 ```
 
-## How to run on docker:
+## How to execute using Docker on terminal:
 ```
 $ docker build -t mars_robot:latest .
 $ docker run --rm -it mars_robot:latest

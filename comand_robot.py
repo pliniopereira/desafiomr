@@ -3,7 +3,7 @@
 # =============================================================================
 # Created By  : Plínio Pereira
 # Email : pliniojr@gmail.com
-# Created Date: Mon May 30 2021
+# Created Date: Sun May 30 2021
 # =============================================================================
 """Desafio técnico para vaga de estágio"""
 """Desafio Python - Lógica de Programação"""

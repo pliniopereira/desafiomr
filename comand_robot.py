@@ -4,7 +4,7 @@
 #
 # comand_robot.py
 #
-#      By: Plínio Pereira <pliniojr@gmail.com>
+#       By: Plínio Pereira <pliniojr@gmail.com>
 # Created: 2021/05/30 13:15:29
 #
 # ============================================================================ #

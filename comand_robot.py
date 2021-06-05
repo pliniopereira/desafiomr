@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # ============================================================================ #
-#                                                                              #
-# comand_robot.py                                                             #
-#                                                                              #
-#      By: Plínio Pereira <pliniojr@gmail.com>                                 #
-# Created: 2021/05/30 13:15:29                                                 #
-#                                                                              #
+#
+# comand_robot.py
+#
+#      By: Plínio Pereira <pliniojr@gmail.com>
+# Created: 2021/05/30 13:15:29
+#
 # ============================================================================ #
 """Desafio técnico para vaga de estágio"""
 """Desafio Python - Lógica de Programação"""
